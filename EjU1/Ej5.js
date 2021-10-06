@@ -55,7 +55,12 @@ for (i = 0; i < matriz.length; i++) {
 
 }
 
-matriz.sort();
+if (con>=con1){
+    max=con;
+}else{
+    max=con1;
+}
 
-console.log(matriz[19]);
-
+if (con2>=max){
+    max=con2;
+}
