@@ -18,14 +18,14 @@ const modulos = [
 
 ]
 
-//console.log(modulos[0].alumnos[0]);
 
-for (i in modulos){
-    console.log(modulos.alumnos);
+let x =     {
+    nombre: 'Sistemas informáticos',
+    curso: 1,
+    alumnos: [
+        'Don Pepito', 'Perico', 'Don José'
+    ]
 }
-
-
-/*
-if (modulos[0].alumnos[0] === modulos[1].alumnos[2]) {
-    console.log(modulos[0].alumnos[0]);
-}*/
+console.log(" ");
+({nombre:n}=x);
+console.log(n);

@@ -7,8 +7,35 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="a"></div>
     <script>
-        console.log("Hola Mundo");
+    //
+     let modulos = [
+    {
+        nombre: 'Sistemas informáticos',
+        curso: 1,
+        alumnos: [
+            'Don Pepito', 'Perico', 'Don José'
+        ]
+    },
+
+    {
+        nombre: 'Desarrollo Web en entorno cliente',
+        curso: 2,
+        asignatura: '',
+        alumnos: [
+            'Juan', 'Perico', 'Andrés', 'Don Pepito'
+        ]
+    },
+
+]
+
+
+
+
+document.getElementById("a").innerHTML="Hola";
+({alumnos}=modulos[0]);
+document.getElementById("a").innerHTML=alumnos;
     </script>
 </body>
 </html>
