@@ -39,8 +39,8 @@ let mySet=new Set();
         }
      }
  }
-console.log("P"+primero.length);
-console.log("S"+segundo);
+//console.log("P"+primero.length);
+//console.log("S"+segundo);
 let uno=primero.length;
 let dos=segundo.length;
 
