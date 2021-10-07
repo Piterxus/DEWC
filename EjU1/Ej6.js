@@ -3,7 +3,7 @@ const modulos = [
         nombre: 'Sistemas informáticos',
         curso: 1,
         alumnos: [
-            'Don Pepito', 'Perico', 'Don José', 'Ximo'
+            'Don Pepito', 'Perico', 'Don José', 'Ximo' , 'a' ,'b' ,'c', 'h'
         ]
     },
 
@@ -13,7 +13,7 @@ const modulos = [
         curso: 2,
         asignatura: '',
         alumnos: [
-            'Juan', 'Perico', 'Andrés', 'Don Pepito', 'Ximo'
+            'Juan', 'Perico', 'Andrés', 'Don Pepito', 'Ximo' ,'a', 'b' ,'c'
         ]
     },
 
@@ -44,22 +44,31 @@ console.log("S"+segundo);
 let uno=primero.length;
 let dos=segundo.length;
 
-if (uno>dos){
+if (uno>=dos){
     for (i=0;i<uno;i++){
         mySet.add(primero[i]);
     }
+    for (i=0;i<segundo.length;i++){
+
+        if (mySet.has(segundo[i])){
+            console.log("R"+segundo[i]);
+        }
+    
+    }
+
 }else{
     for (i=0;i<dos;i++){
         mySet.add(segundo[i]);
     }
-}
-for (i=0;i<primero.length;i++){
+    for (i=0;i<primero.length;i++){
 
-    if (mySet.has(primero[i])){
-        console.log("R"+primero[i]);
+        if (mySet.has(primero[i])){
+            console.log("R"+primero[i]);
+        }
+    
     }
-
 }
+
 /*
 var mySet = new Set();
 mySet.add(modulos[0].alumnos);
