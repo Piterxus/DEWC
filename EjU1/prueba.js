@@ -45,3 +45,20 @@ if (e === max) {
 }
 
 console.log("Max: " + max);
+
+let cad="Sergi:Garcia:1234562";
+let tfo;
+cad=cad.toUpperCase(); console.log(cad);
+
+splitTodosCampos=cad.split(":");
+
+split1Campo=cad.split(":",1);
+console.log(splitTodosCampos); 
+
+console.log(split1Campo);
+tfo=splitTodosCampos[2];
+//Cambio en el telefono los números 3 por 9s
+tfo=tfo.replace("2","9"); console.log(tfo);
+
+//Muestro el quinto número del teléfono
+console.log(tfo.charAt(4));
