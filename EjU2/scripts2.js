@@ -1,11 +1,20 @@
-function mostrarMensaje(evento){
-   if(evento.type==="keyup"){
-       alert(evento.keyCode);
-   }else if(evento.type==="click"){
-       alert(evento.clientX+" "+evento.clientY);
-   }
+let cuerpo = document.body;
+let pre = document.createElement("pre");
+let encabezado1 = document.getElementsByTagName("h1");
+let encabezado2 = document.getElementsByTagName("h2");
+cuerpo.appendChild(pre);
+
+
+for (i=0;i<encabezado1.length;i++){
+    // pre.appendChild(document.createTextNode(encabezado1[i].innerHTML));
+
+    pre.innerHTML+=(i+1)+ ".-"+encabezado1[i].innerHTML + "<br>";
+
+
+    
+
 }
-//document.getElementById("cont").addEventListener("click",mostrarMensaje);
-document.addEventListener("keyup",mostrarMensaje);
-document.getElementById("cont").addEventListener("dblclick",function(){alert("Código")})
+
+// pre.appendChild(encabezado1[0]);
+
 
