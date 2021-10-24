@@ -1,25 +1,57 @@
 let cuerpo = document.body;
 let pre = document.createElement("pre");
 let lista = document.createElement("ol");
+let lista2 = document.createElement("ol");
 
 
 let encabezado1 = document.getElementsByTagName("h1");
 let encabezado2 = document.getElementsByTagName("h2");
-
+let n = (encabezado1.length + encabezado2.length);
 cuerpo.appendChild(pre);
 pre.appendChild(lista);
 
-
-//lista.appendChild(encLista);
-//lista.appendChild(encLista2);
-
-for (i = 0; i < encabezado1.length; i++) {
-
-    let a = lista.appendChild(document.createElement("li"));
+let all = document.getElementsByTagName("*");
+for (var i = 0, max = all.length; i < max; i++) {
 
 
-    let text = encabezado1[i].innerHTML;
-    a.appendChild(document.createTextNode(text));
+  for (elementos of encabezado1) {
+    if (all[i] == elementos) {
+      let a = lista.appendChild(document.createElement("li"));
+      let b = document.createElement("ol");
+
+
+      let text = elementos.innerHTML;
+
+      a.appendChild(document.createTextNode(text));
+      a.appendChild(b);
+
+      
+    }
+
+
+ 
+  }
+
+  for (elementos of encabezado2) {
+    if (all[i] == elementos) {
+      let a = lista.appendChild(document.createElement("li"));
+      let b = document.createElement("ol");
+
+
+      let text = elementos.innerHTML;
+
+      a.appendChild(document.createTextNode(text));
+      a.appendChild(b);
+    }
+  }
+
+  
+
+
+
+
+
+
 
 
 
@@ -33,7 +65,6 @@ for (i = 0; i < encabezado1.length; i++) {
 
 
 
-let contH1 = 0;
 
 
 
@@ -50,35 +81,11 @@ let contH1 = 0;
 
 
 
-// for (elemento of encabezado2){
-
-// }
 
 
 
 
 
 
-
-
-
-
-// for (i=0;i<encabezado1.length;i++){
-//     // pre.appendChild(document.createTextNode(encabezado1[i].innerHTML));
-
-
-//     let tema=encabezado1[i].innerHTML.split(" ");
-//     let subtema = tema[1];
-//     console.log(encabezado1[i].innerHTML);
-//     console.log(encabezado2[i].innerHTML)
-//     //console.log(subtema);
-//     //console.log(encabezado2[i].innerHTML)
-//     pre.innerHTML+=(i+1)+ ".-"+encabezado1[i].innerHTML + "<br>";
-
-
-
-// }
-
-// pre.appendChild(encabezado1[0]);
 
 
