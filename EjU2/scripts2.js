@@ -1,95 +1,32 @@
 let cuerpo = document.body;
 let pre = document.createElement("pre");
 let lista = document.createElement("ol");
-
-
+cuerpo.appendChild(pre);
+pre.appendChild(lista);
 
 let encabezado1 = document.getElementsByTagName("h1");
 let encabezado2 = document.getElementsByTagName("h2");
 
-cuerpo.appendChild(pre);
-pre.appendChild(lista);
-
 let all = document.getElementsByTagName("*");
-for (var i = 0, max = all.length; i < max; i++) {
-
-
+for (let i = 0, max = all.length; i < max; i++) {
   for (elementos of encabezado1) {
-   
     if (all[i] == elementos) {
-     
-      let a = lista.appendChild(document.createElement("li"));
-      var b = document.createElement("ol");
-
+      let listah1 = lista.appendChild(document.createElement("li"));
+      var listah2 = document.createElement("ol"); //Si declaro esta variable con let luego no puedo acceder a ella para añadir elementos.
 
       let text = elementos.innerHTML;
 
-      a.appendChild(document.createTextNode(text));
-      a.appendChild(b);
-    
-      
+      listah1.appendChild(document.createTextNode(text));
+      listah1.appendChild(listah2);
     }
-
-
-
- 
   }
   for (elementos of encabezado2) {
     if (all[i] == elementos) {
-     b.appendChild(document.createElement("li"));
-    
+      listah2.appendChild(document.createElement("li"));
 
+      let text = elementos.innerHTML;
 
-       let text = elementos.innerHTML;
-
-      b.appendChild(document.createTextNode(text));
-    
+      listah2.appendChild(document.createTextNode(text));
     }
   }
-
-  
-
-  
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
