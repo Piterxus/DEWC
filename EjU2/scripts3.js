@@ -5,7 +5,7 @@ let boton = document.getElementsByTagName('button');
 
 
 function oculta(event) {
-    //this.style.display = 'none';
+    
 
     setTimeout(
         () => event.target.style.visibility='hidden',500
@@ -16,8 +16,12 @@ function oculta(event) {
 
 }
 
-function elimina() {
- this.parentNode.removeChild(this);
+function elimina(event) {
+ //this.parentNode.removeChild(this); // Sin event
+
+//event.target.parentNode.removeChild(this);
+event.target.remove();
+
 }
 
 function reaparece() {
