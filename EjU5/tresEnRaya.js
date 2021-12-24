@@ -1,19 +1,28 @@
-
-let jugador1={
-  ficha:"X"
+let jugador1 = {
+  ficha: "X",
 };
 
-let jugador2={
-  ficha:"O"
+let jugador2 = {
+  ficha: "O",
 };
-
-let pepe=  jugador1;
-let juana= jugador2;
 
 var tab = new Array(10);
 
-for (let i=0;i<10;i++){
-  tab[i]=i+1;
+function comprobar(array) {
+  let seguir = true;
+
+  if (
+    (array[0] === "X" && array[1] === "X" && array[2] === "X") ||
+    (array[0] === "X" && array[4] === "X" && array[8] === "X")
+  ) {
+    seguir = false;
+  }
+
+  return seguir;
+}
+
+for (let i = 0; i < 10; i++) {
+  tab[i] = i + 1;
 }
 
 function tablero() {
@@ -25,24 +34,21 @@ function tablero() {
 
 tablero();
 
-// var respuestas = [];
 function pregunta() {
   process.stdout.write("Casilla: ");
 }
 
 process.stdin.on("data", function (data) {
   let dataFormat = data.toString().trim();
-  // respuestas.push(dataFormat);
- 
+
   tab[dataFormat - 1] = jugador1.ficha;
 
   tablero();
-    process.exit();
 
-  // if (respuestas.length < 3) {
-  //   pregunta(respuestas.length);
-  // } else {
-  //   process.exit();
-  // }
+  if (comprobar(tab)) {
+    pregunta();
+  } else {
+    process.exit();
+  }
 });
 pregunta();
